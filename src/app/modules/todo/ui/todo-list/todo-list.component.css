@@ -1,0 +1,16 @@
+.box__item label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid teal;
+}
+
+.underline_none {
+    text-decoration: none;
+}
+
+.underline {
+    text-decoration: underline;
+}

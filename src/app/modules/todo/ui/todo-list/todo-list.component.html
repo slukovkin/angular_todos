@@ -1,0 +1,10 @@
+<ul>
+  <li class="box__item" *ngFor="let todo of todolist">
+    <label (click)="onUpdate(todo.id)">
+      <input type="checkbox" class="checkbox" [checked]="todo.isCompleted" />
+      <del *ngIf="todo.isCompleted"><h3>{{ todo.title }}</h3></del>
+      <h3 *ngIf="!todo.isCompleted">{{ todo.title }}</h3>
+      <button class="btn" (click)="onDelete(todo.id)">Delete</button>
+    </label>
+  </li>
+</ul>

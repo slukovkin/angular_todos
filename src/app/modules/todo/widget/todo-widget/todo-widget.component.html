@@ -1,2 +1,7 @@
-  <h3 style="text-align: center; margin: 20px;">ToDo Widget</h3>
+<h3 style="text-align: center; margin: 20px">ToDo Widget</h3>
 <app-todo-create-form (createTitle)="onCreate($event)"></app-todo-create-form>
+<app-todo-list
+  [todolist]="todolist$ | async"
+  (delete)="onDelete($event)"
+  (update)="onUpdate($event)"
+></app-todo-list>

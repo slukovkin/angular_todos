@@ -28,6 +28,32 @@ export const todoReducer = (state = initialState, action: todoActions) => {
           },
         ],
       }
+    case todoActionsType.update:
+      return {
+        ...state,
+        todolist: [
+          ...state.todolist.map((item) => {
+            if (item.id === action.payload.id) {
+              return {
+                ...item,
+
+                // id: item.id,
+                // title: item.title,
+                isCompleted: !item.isCompleted,
+              }
+            }
+            return item
+          }),
+        ],
+      }
+
+    case todoActionsType.delete:
+      return {
+        ...state,
+        todolist: [
+          ...state.todolist.filter((item) => item.id !== action.payload.id),
+        ],
+      }
     default:
       return state
   }
