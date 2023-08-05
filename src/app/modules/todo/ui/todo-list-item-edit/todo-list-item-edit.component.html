@@ -1,0 +1,9 @@
+<form>
+  <label>
+    <input type="text" name="title" [(ngModel)]="title" />
+    <div>
+      <button class="btn" [disabled]="!title">Send</button>
+      <button class="btn" type="reset">Cancel</button>
+    </div>
+  </label>
+</form>

@@ -36,9 +36,6 @@ export const todoReducer = (state = initialState, action: todoActions) => {
             if (item.id === action.payload.id) {
               return {
                 ...item,
-
-                // id: item.id,
-                // title: item.title,
                 isCompleted: !item.isCompleted,
               }
             }

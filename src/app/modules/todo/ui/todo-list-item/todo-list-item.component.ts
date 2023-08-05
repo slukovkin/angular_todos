@@ -2,13 +2,13 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
 import { TodoInterface } from '../../types/todo.interface'
 
 @Component({
-  selector: 'app-todo-list',
-  templateUrl: './todo-list.component.html',
-  styleUrls: ['./todo-list.component.css'],
+  selector: 'app-todo-list-item',
+  templateUrl: './todo-list-item.component.html',
+  styleUrls: ['./todo-list-item.component.css'],
 })
-export class TodoListComponent implements OnInit {
+export class TodoListItemComponent implements OnInit {
   @Input()
-  todolist: TodoInterface[]
+  todo: TodoInterface
 
   @Output()
   delete = new EventEmitter<number>()
@@ -19,11 +19,11 @@ export class TodoListComponent implements OnInit {
 
   ngOnInit() {}
 
-  onDelete(id: number) {
-    this.delete.emit(id)
+  onDelete() {
+    this.delete.emit()
   }
 
-  onUpdate(id: number) {
-    this.update.emit(id)
+  onUpdate() {
+    this.update.emit()
   }
 }
