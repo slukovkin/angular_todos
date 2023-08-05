@@ -1,6 +1,6 @@
-<form>
+<form (ngSubmit)="onEdit($event)">
   <label>
-    <input type="text" name="title" [(ngModel)]="title" />
+    <input [(ngModel)]="title" name="title" type="text" />
     <div>
       <button class="btn" [disabled]="!title">Send</button>
       <button class="btn" type="reset">Cancel</button>

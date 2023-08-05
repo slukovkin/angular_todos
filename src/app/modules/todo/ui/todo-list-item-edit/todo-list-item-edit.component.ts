@@ -17,4 +17,8 @@ export class TodoListItemEditComponent implements OnInit {
   ngOnInit() {
     this.title = this.todo.title
   }
+
+  onEdit($event) {
+    console.log($event)
+  }
 }
