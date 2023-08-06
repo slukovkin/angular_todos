@@ -6,6 +6,7 @@ import { StoreModule } from '@ngrx/store'
 import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 import { TodoModule } from './modules/todo/todo.module'
 import { RouterModule } from '@angular/router'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { RouterModule } from '@angular/router'
         redirectTo: '',
       },
     ]),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
