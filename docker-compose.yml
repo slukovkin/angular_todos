@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  todos:
+    build: ./
+    command: npm run start
+    restart: unless-stopped
+    ports:
+      - "4200:4200"
